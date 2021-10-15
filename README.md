@@ -1,12 +1,13 @@
 # AED-T2
 # FIBA - Integrative Task 2
 
-This program reflects the functionality of a game store.
+This program reflects the functionality of basketball statistics used to search relevant data.
 
 ## Tools:
 * Java software.
 * Eclipse.
 * Visual Studio Code
+* IntelliJ IDEA
 
 ## Participants:
 * Daniela Olarte
@@ -16,7 +17,6 @@ This program reflects the functionality of a game store.
 
 ## Summary: 
 
-This app was created for a game store that recently opened up and needs a program that is able to organize their products so that customers can purchase and search different games in an effective way. In order to achieve this goal, the games have to be organized so that customers are able to find them easily and put them in their basket. In addition, the time of purchase has to be the most efficient, meaning the queue should take a few minutes.
+FIBA is the regulatory body for basketball worldwide, given the recent avalanche of numbers of figures from the games has decided that the most relevant data of each of the professionals in the basketball. Patterns about the development of sport and more criteria to get an idea of where the sports is currently heading. In this program, 200,000 data about NBA players will be loaded with information such as name, last name, age, team, points, rebounds, assisst, robberies and blocks. 
 
-Moreover, you can find all documentation of this app [here](https://github.com/Jacobo0312/AED-T1/blob/main/docs/Engineering-Method-%26-Functional-Requeriments.pdf).
-
+Moreover, you can find all documentation of this app [here](___).
