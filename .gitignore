@@ -6,6 +6,6 @@
 input.txt
 /lib/
 /.settings/
-/.classpath/
+.classpath
 .project
 out
