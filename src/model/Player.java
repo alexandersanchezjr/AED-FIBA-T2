@@ -1,11 +1,11 @@
 package model;
 
-public class Player {
+public class Player implements Comparable<Player> {
 
 	private String name;
 	private String lastName;
 	private int age;
-	private int team;
+	private String team;
 	private int points;
 	private int rebounds;
 	private int assists;
@@ -13,7 +13,7 @@ public class Player {
 	private int blocks;
 	
 
-	public Player(String name, String lastName, int age, int team, int points, int rebounds, int assists, int robberies, int blocks) {
+	public Player(String name, String lastName, int age, String team, int points, int rebounds, int assists, int robberies, int blocks) {
 		this.name = name;
 		this.lastName = lastName;
 		this.age = age;
@@ -49,11 +49,11 @@ public class Player {
 		this.age = age;
 	}
 
-	public int getTeam() {
+	public String getTeam() {
 		return this.team;
 	}
 
-	public void setTeam(int team) {
+	public void setTeam(String team) {
 		this.team = team;
 	}
 
@@ -96,6 +96,20 @@ public class Player {
 	public void setBlocks(int blocks) {
 		this.blocks = blocks;
 	}
+
+	@Override
+	public int compareTo(Player o) {
+		return getAge()-o.getAge();
+	}
+
+
+	@Override
+	public String toString() {
+		return "{" +
+			", age='" + getAge() + "'" +
+			"}";
+	}
+
 	
 	
 	
