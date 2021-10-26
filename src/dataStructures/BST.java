@@ -1,13 +1,20 @@
 package dataStructures;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 public class BST<V extends Comparable<V>> implements IBST<V> {
 
     private int weight;
     private Node<V> root;
+    private ArrayList<V> list;
+    private Comparator<V> comparator;
 
-    public BST() {
+    public BST(Comparator<V> comparator) {
         this.weight = 0;
         this.root = null;
+        list=new ArrayList<V>();
+        this.comparator=comparator;
     }
 
     public int getWeight() {
@@ -142,5 +149,52 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
 
         return y;
     }
+
+
+  
+	
+	public void inOrderLess(Node<V> node,V param) {
+		if (node != null) {
+			inOrderLess(node.getRight(),param);
+			if(node.getValue().compareTo(param)>0) {
+				list.add(node.getValue());
+			}
+			inOrderLess(node.getLeft(),param);
+		}
+	}
+	
+	public void inOrderMore(Node<V> node,V param) {
+		if (node != null) {
+			inOrderMore(node.getRight(),param);
+			if(node.getValue().compareTo(param)<0) {
+				list.add(node.getValue());
+			}
+			inOrderMore(node.getLeft(),param);
+		}
+	}
+
+    public void searchEquals(Node<V> node,V param) {
+		if (node != null) {
+			searchEquals(node.getRight(),param);
+			if(node.getValue().compareTo(param)==0) {
+				list.add(node.getValue());
+			}
+			searchEquals(node.getLeft(),param);
+		}
+	}
+	
+	public void eraseNodes(){
+		list.clear();
+	}
+
+
+    public ArrayList<V> getList() {
+        return this.list;
+    }
+
+    public void setList(ArrayList<V> list) {
+        this.list = list;
+    }
+
 
 }

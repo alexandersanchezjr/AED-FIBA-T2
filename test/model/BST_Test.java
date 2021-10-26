@@ -16,13 +16,13 @@ public class BST_Test {
 
 
     private void stage1() {
-         players =new BST<>();
+         players =new BST<>(null);
 
     }
 
 
     private void stage2(){
-        players =new BST<>();
+        players =new BST<>(null);
 
         Player player1=new Player("Jacobo", "xxx", 4, "xxx", 3, 3, 3, 3, 3);
 

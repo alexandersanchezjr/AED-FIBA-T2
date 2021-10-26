@@ -1,11 +1,13 @@
 package dataStructures;
 
-public class RBT<K extends Comparable<K>> extends BST<K> implements IRBT<K> {
+import java.util.Comparator;
+
+public class RBT<K extends Comparable<K>> extends BST<K> implements IRBT<K>{
 
 	private NodeRBT<K> nullNode;
 	
-	public RBT() {
-		super();
+	public RBT(Comparator<K> comparator) {
+		super(comparator);
 		nullNode = new NodeRBT<K>(null);
 		nullNode.setC(0);
 		
@@ -73,7 +75,7 @@ public class RBT<K extends Comparable<K>> extends BST<K> implements IRBT<K> {
 	public boolean insertNode(K k) {
 		boolean add=false;
 		NodeRBT<K> newNode = new NodeRBT<K>(k);
-		insert(k);
+		insert(newNode);
 		newNode.setLeft(nullNode);
 		newNode.setRight(nullNode);
 		if(newNode==getRoot() || newNode.getFather()==null) {	
@@ -123,7 +125,5 @@ public class RBT<K extends Comparable<K>> extends BST<K> implements IRBT<K> {
 			}
 		}
 		((NodeRBT<K>)getRoot()).setC(0);
-
 	}
-
 }

@@ -11,6 +11,7 @@ public class Player implements Comparable<Player> {
 	private int assists;
 	private int robberies;
 	private int blocks;
+	private int key;
 
 	public Player(String name, String lastName, int age, String team, int points, int rebounds, int assists,
 			int robberies, int blocks) {
@@ -23,6 +24,7 @@ public class Player implements Comparable<Player> {
 		this.assists = assists;
 		this.robberies = robberies;
 		this.blocks = blocks;
+		this.key = 0;
 	}
 
 	public String getName() {
@@ -97,14 +99,49 @@ public class Player implements Comparable<Player> {
 		this.blocks = blocks;
 	}
 
+	public int getKey() {
+		return this.key;
+	}
+
+	public void setKey(String key) {
+		switch (key) {
+		case "points":
+			this.key = points;
+
+			break;
+		case "rebounds":
+			this.key = rebounds;
+
+			break;
+		case "assist":
+			this.key = assists;
+
+			break;
+
+		case "robberies":
+			this.key = robberies;
+
+			break;
+
+		case "blocks":
+			this.key = blocks;
+
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
 	@Override
 	public int compareTo(Player o) {
-		return getAge() - o.getAge();
+		return getKey() - o.getKey();
 	}
 
 	@Override
 	public String toString() {
-		return "{" + ", age='" + getAge() + "'" + "}";
+		return "{" + ", points='" + getPoints() + "'" + "}";
 	}
 
 }
