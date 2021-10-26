@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="401.0" fitWidth="631.0" layoutX="15.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="400.0" fitWidth="650.0" layoutX="31.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../image/fiba-background.png" />
          </image>
@@ -37,10 +37,5 @@
             <Font name="Copperplate Gothic Bold" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="272.0" fitWidth="661.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../image/basket-ball.png" />
-         </image>
-      </ImageView>
    </children>
 </Pane>

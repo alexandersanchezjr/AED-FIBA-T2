@@ -1,6 +1,6 @@
 package dataStructures;
 
-public class BST<V extends Comparable<V>> {
+public class BST<V extends Comparable<V>> implements IBST<V> {
 
     private int weight;
     private Node<V> root;
@@ -26,7 +26,7 @@ public class BST<V extends Comparable<V>> {
         this.root = root;
     }
 
-    public void insert(V value) {
+    public Node<V> insert(V value) {
         Node<V> node = new Node<V>(value);
         if (root != null) {
             insert(root, node);
@@ -34,6 +34,17 @@ public class BST<V extends Comparable<V>> {
             root = node;
         }
         weight++;
+        return node;
+    }
+
+    public Node<V> insert(Node<V> node) {
+        if (root != null) {
+            insert(root, node);
+        } else {
+            root = node;
+        }
+        weight++;
+        return node;
     }
 
     private void insert(Node<V> current, Node<V> node) {
@@ -66,7 +77,7 @@ public class BST<V extends Comparable<V>> {
         if (current == null || (current.getValue().compareTo(value)) == 0) {
             return current;
         } else if (value.compareTo(current.getValue()) < 0) {
-           // System.out.println(current);
+            // System.out.println(current);
             return search(current.getLeft(), value);
         } else {
             return search(current.getRight(), value);

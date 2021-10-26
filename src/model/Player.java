@@ -11,9 +11,9 @@ public class Player implements Comparable<Player> {
 	private int assists;
 	private int robberies;
 	private int blocks;
-	
 
-	public Player(String name, String lastName, int age, String team, int points, int rebounds, int assists, int robberies, int blocks) {
+	public Player(String name, String lastName, int age, String team, int points, int rebounds, int assists,
+			int robberies, int blocks) {
 		this.name = name;
 		this.lastName = lastName;
 		this.age = age;
@@ -99,20 +99,12 @@ public class Player implements Comparable<Player> {
 
 	@Override
 	public int compareTo(Player o) {
-		return getAge()-o.getAge();
+		return getAge() - o.getAge();
 	}
-
 
 	@Override
 	public String toString() {
-		return "{" +
-			", age='" + getAge() + "'" +
-			"}";
+		return "{" + ", age='" + getAge() + "'" + "}";
 	}
-
-	
-	
-	
-	
 
 }

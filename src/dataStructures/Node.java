@@ -1,11 +1,13 @@
 package dataStructures;
 
-public class Node<V>  {
+public class Node<V> {
     private V value;
     private Node<V> father;
-    private Node<V> left;
+    protected Node<V> left;
     private Node<V> right;
-
+    private int height;
+    private int h1;
+    private int h2;
 
 
     public Node(V value) {
@@ -13,8 +15,8 @@ public class Node<V>  {
         this.father = null;
         this.left = null;
         this.right = null;
+        height = 1;
     }
-
 
     public V getValue() {
         return this.value;
@@ -47,5 +49,37 @@ public class Node<V>  {
     public void setRight(Node<V> right) {
         this.right = right;
     }
+
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+
+    public void modifiedNode() {	
+		int leftH=0;
+		int rightH=0;
+		if(left!=null) {
+			leftH=left.height;
+		}
+		if(right!=null) {
+			rightH=right.height;
+		}
+		if(leftH>rightH) {
+			height=leftH+1;
+		}
+		else {
+			height=rightH+1;
+		}
+
+	}
+	public int getBFactor() {
+		return h2-h1;
+	}
+
 
 }
