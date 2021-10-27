@@ -10,35 +10,52 @@ import dataStructures.*;
 
 public class FIBA {
 
-    private ArrayList<Player> players;
-    private BST<Player> playersBST;
-    private RBT<Player> playersRBT;
-    private AVL<Player> playersAVL;
-    private BST<String> test;;
-    private Comparator<Player>points;
-    private Comparator<Player> rebounds;
-    private Comparator<Player>assists;
-    private Comparator<Player> robberies;
-    private Comparator<Player>blocks;
+    private BST<Player> pointsBST;
+    private AVL<Player> reboundsAVL;
+    //private AVL<Player> playersAVL;
+    private RBT<Player> assistsRBT;
+    private RBT<Player> testRBT;
+    //private AVL<Player> playersAVL;
+    //private BST<String> test;;
+
 
 
     public FIBA() {
-        players = new ArrayList<>();
 
 
-        playersBST = new BST<>(new Comparator<Player>() {
+        pointsBST = new BST<>(new Comparator<Player>() {
             public int compare(Player i1,Player i2)
             {
-                return i1.getAssists()-i1.getAssists();
+                return i1.getPoints()-i2.getPoints();
             }
         });
 
 
-        playersRBT = new RBT<>(null);
-        playersAVL = new AVL<>(null);
-        test=new BST<>(null);
+        reboundsAVL = new AVL<>(new Comparator<Player>() {
+            public int compare(Player i1,Player i2)
+            {
+                return i1.getRebounds()-i2.getRebounds();
+            }
+        });
 
-        
+        assistsRBT = new RBT<>(new Comparator<Player>() {
+            public int compare(Player i1,Player i2)
+            {
+                return i1.getAssists()-i2.getAssists();
+            }
+        });
+
+
+        testRBT = new RBT<>(new Comparator<Player>() {
+            public int compare(Player i1,Player i2)
+            {
+                return i1.getPoints()-(i2.getPoints());
+            }
+        });
+
+   
+
+
         try {
             importData();
         } catch (IOException e) {
@@ -50,7 +67,7 @@ public class FIBA {
 
 
 
-    public static final String PLAYERS_FILE_NAME = "data/test.csv";
+    public static final String PLAYERS_FILE_NAME = "data/Dataset.csv";
 
     public void importData() throws IOException {
 
@@ -64,16 +81,20 @@ public class FIBA {
                     Integer.parseInt(line[5]), Integer.parseInt(line[6]), Integer.parseInt(line[7]),
                     Integer.parseInt(line[8]));
      
-            player.setKey("blocks");
 
-            playersBST.insert(player);
+                    //testRBT.insert(player);
             
         }
+        System.out.println(testRBT.getWeight());
+        //REVISAR ES BST CON ARRAYLIST PARA LOS IGUALES 
 
-        Player p=new Player("name", "lastName", 5, "team", 5, 5, 5, 4, 10);
-        playersBST.inOrderMore(playersBST.getRoot(), p);
-        System.out.println(playersBST.getList());
-        System.out.println(playersBST.getWeight());
+        Player param=new Player("name", "lastName", 30, "team", 5, 5, 5, 4, 10);
+
+        testRBT.inOrderMore(testRBT.getRoot(), param);
+        System.out.println(testRBT.getList());
+        //playersBST.inOrderMore(playersBST.getRoot(), p);
+        //System.out.println(playersBST.getList());
+        //System.out.println(playersBST.getWeight());
 
     }
 

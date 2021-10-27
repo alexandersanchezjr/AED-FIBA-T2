@@ -2,7 +2,7 @@ package dataStructures;
 
 import java.util.Comparator;
 
-public class AVL<K extends Comparable<K>> extends BST<K> implements IAVL<K>{
+public class AVL<K> extends BST<K> implements IAVL<K>{
 
 	public AVL(Comparator<K> comparator) {
 		super(comparator);

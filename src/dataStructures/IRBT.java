@@ -1,6 +1,6 @@
 package dataStructures;
 
-public interface IRBT<K extends Comparable<K>>extends IBST<K>{
+public interface IRBT<K>extends IBST<K>{
 
 	public NodeRBT<K> rotateRight(NodeRBT<K> node);
 	public NodeRBT<K> rotateLeft(NodeRBT<K> node);

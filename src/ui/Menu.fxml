@@ -9,32 +9,32 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="407.0" fitWidth="630.0" layoutX="31.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../image/fiba-background.png" />
          </image>
       </ImageView>
-      <Button layoutX="517.0" layoutY="190.0" mnemonicParsing="false" onAction="#search" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: gold;" text="Search">
+      <Button layoutX="517.0" layoutY="190.0" mnemonicParsing="false" onAction="#search" prefHeight="40.0" prefWidth="98.0" style="-fx-background-radius: 10;" text="Search">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <ChoiceBox fx:id="criteriaBox" layoutX="14.0" layoutY="197.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="comparisonBox" layoutX="184.0" layoutY="197.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="criteriaBox" layoutX="14.0" layoutY="197.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 2 0; -fx-border-color: black;" />
+      <ChoiceBox fx:id="comparisonBox" layoutX="184.0" layoutY="197.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 2 0; -fx-border-color: black;" />
       <TextField fx:id="valueBox" layoutX="346.0" layoutY="197.0" />
-      <Label layoutX="51.0" layoutY="168.0" text="CRITERIA" textFill="#ddbf38cc">
+      <Label layoutX="51.0" layoutY="168.0" prefHeight="26.0" prefWidth="88.0" text="CRITERIA" textFill="#ddbf38cc">
          <font>
-            <Font name="Copperplate Gothic Bold" size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font></Label>
       <Label layoutX="204.0" layoutY="168.0" text="COMPARISON" textFill="#ddbf38cc">
          <font>
-            <Font name="Copperplate Gothic Bold" size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <Label layoutX="384.0" layoutY="168.0" text="VALUE" textFill="#ddbf38cc">
          <font>
-            <Font name="Copperplate Gothic Bold" size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
    </children>

@@ -2,7 +2,7 @@ package dataStructures;
 
 import java.util.Comparator;
 
-public class RBT<K extends Comparable<K>> extends BST<K> implements IRBT<K>{
+public class RBT<K> extends BST<K> implements IRBT<K>{
 
 	private NodeRBT<K> nullNode;
 	

@@ -3,7 +3,7 @@ package dataStructures;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class BST<V extends Comparable<V>> implements IBST<V> {
+public class BST<V> implements IBST<V> {
 
     private int weight;
     private Node<V> root;
@@ -56,7 +56,8 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
 
     private void insert(Node<V> current, Node<V> node) {
         if (current != null) {
-            if (node.getValue().compareTo(current.getValue()) < 0) {
+            if(comparator.compare(node.getValue(), current.getValue())<0)
+            {
                 Node<V> left = current.getLeft();
                 if (left != null) {
                     insert(left, node);
@@ -64,7 +65,7 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
                     current.setLeft(node);
                     node.setFather(current);
                 }
-            } else if (node.getValue().compareTo(current.getValue()) >= 0) {
+            } else  if(comparator.compare(node.getValue(), current.getValue())>=0) {
                 Node<V> right = current.getRight();
                 if (right != null) {
                     insert(right, node);
@@ -81,9 +82,10 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
     }
 
     private Node<V> search(Node<V> current, V value) {
-        if (current == null || (current.getValue().compareTo(value)) == 0) {
+        if (current == null || (comparator.compare(current.getValue(), value)) == 0) {
             return current;
-        } else if (value.compareTo(current.getValue()) < 0) {
+        } else if (comparator.compare(value, current.getValue()) < 0)
+        {
             // System.out.println(current);
             return search(current.getLeft(), value);
         } else {
@@ -156,7 +158,8 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
 	public void inOrderLess(Node<V> node,V param) {
 		if (node != null) {
 			inOrderLess(node.getRight(),param);
-			if(node.getValue().compareTo(param)>0) {
+            if(comparator.compare(node.getValue(),param)>0)
+			{
 				list.add(node.getValue());
 			}
 			inOrderLess(node.getLeft(),param);
@@ -166,7 +169,7 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
 	public void inOrderMore(Node<V> node,V param) {
 		if (node != null) {
 			inOrderMore(node.getRight(),param);
-			if(node.getValue().compareTo(param)<0) {
+			if(comparator.compare(node.getValue(),param)<0) {
 				list.add(node.getValue());
 			}
 			inOrderMore(node.getLeft(),param);
@@ -176,7 +179,7 @@ public class BST<V extends Comparable<V>> implements IBST<V> {
     public void searchEquals(Node<V> node,V param) {
 		if (node != null) {
 			searchEquals(node.getRight(),param);
-			if(node.getValue().compareTo(param)==0) {
+			if((comparator.compare(node.getValue(),param)==0)) {
 				list.add(node.getValue());
 			}
 			searchEquals(node.getLeft(),param);

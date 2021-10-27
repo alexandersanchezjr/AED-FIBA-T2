@@ -1,6 +1,6 @@
 package dataStructures;
 
-public interface IBST<V extends Comparable<V>> {
+public interface IBST<V> {
 
     public int getWeight();
 

@@ -1,6 +1,6 @@
 package dataStructures;
 
-public class NodeAVL<K extends Comparable<K>> extends Node<K>  {
+public class NodeAVL<K> extends Node<K>  {
 
 	private int balanceF;	
 	public NodeAVL(K k) {

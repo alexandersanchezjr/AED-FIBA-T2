@@ -1,6 +1,6 @@
 package dataStructures;
 
-public class NodeRBT<K extends Comparable <K>> extends Node<K> {
+public class NodeRBT<K> extends Node<K> {
 
 	public final static int RED=1;
 	public final static int BLACK=0;
