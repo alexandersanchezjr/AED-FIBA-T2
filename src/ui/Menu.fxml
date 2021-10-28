@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="490.0" layoutY="28.0" mnemonicParsing="false" onAction="#search" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: transparent;" stylesheets="@../styles/styles.css" text="Search">
@@ -17,15 +16,15 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="criteriaBox" layoutX="408.0" layoutY="256.0" prefHeight="40.0" prefWidth="160.0" stylesheets="@../styles/styles.css" />
-      <ChoiceBox fx:id="comparisonBox" layoutX="408.0" layoutY="151.0" prefHeight="40.0" prefWidth="160.0" stylesheets="@../styles/styles.css" />
-      <TextField fx:id="valueBox" layoutX="435.0" layoutY="393.0" />
-      <Label layoutX="77.0" layoutY="249.0" stylesheets="@../styles/styles.css" text="CRITERIA" textFill="#ffffffcc">
+      <ChoiceBox fx:id="criteriaBox" layoutX="383.0" layoutY="145.0" prefHeight="54.0" prefWidth="196.0" stylesheets="@../styles/styles.css" />
+      <ChoiceBox fx:id="comparisonBox" layoutX="383.0" layoutY="249.0" prefHeight="54.0" prefWidth="196.0" stylesheets="@../styles/styles.css" />
+      <TextField fx:id="valueBox" layoutX="383.0" layoutY="339.0" prefHeight="63.0" prefWidth="145.0" stylesheets="@../styles/styles.css" />
+      <Label layoutX="77.0" layoutY="249.0" stylesheets="@../styles/styles.css" text="COMPARISON" textFill="#ffffffcc">
          <font>
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <Label layoutX="77.0" layoutY="144.0" stylesheets="@../styles/styles.css" text="COMPARISON" textFill="#ffffffcc">
+      <Label layoutX="77.0" layoutY="144.0" stylesheets="@../styles/styles.css" text="CRITERIA" textFill="#ffffffcc">
          <font>
             <Font size="51.0" />
          </font>

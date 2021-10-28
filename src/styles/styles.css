@@ -20,7 +20,7 @@
   .button:hover
   {
     -fx-font-family: "FIBA";
-    -fx-text-fill: grey;
+    -fx-text-fill:#9b9b9b ;
     -fx-font-size: 30px;
 
   
@@ -35,7 +35,7 @@
 .table-view .column-header,
 .table-view .column-header-background .filler {
     -fx-cell-size : 20;
-    -fx-background-color:   #3C3744;
+    -fx-background-color:   black;
 }
 .table-view .column-header .label{
 
@@ -69,7 +69,7 @@
 .table-view .scroll-bar:horizontal .track,
 .table-view .scroll-bar:vertical .track{
 	-fx-background-color: transparent;
-	-fx-border-color:derive(  #2D75E8,80%);
+	-fx-border-color:derive(  #9b9b9b,80%);
 	-fx-background-radius: 2em;
 	-fx-border-radius:2em;
 }
@@ -77,25 +77,34 @@
 /* The main scrollbar **thumb** CSS class which we drag every time (movable) */
 .table-view .scroll-bar:horizontal .thumb,
 .table-view .scroll-bar:vertical .thumb {
-    -fx-background-color:derive( #2D75E8,90%);
+    -fx-background-color:derive( #9b9b9b,90%);
 	-fx-background-insets: 2, 0, 0;
 	-fx-background-radius: 2em;
 
 }
 
 
+.text-field{
+  -fx-font-family: "FIBA";
+  -fx-text-fill: white;
+  -fx-background-color: transparent;
+    -fx-font-size: 30px;
+    -fx-border-color:white;
+    -fx-border-width: 0 0 2 0;
+}
+
+
 
 
 .choice-box {
-   -fx-background-color: transparent;
-   -fx-focus-color: #3D52D5;
-   -fx-faint-focus-color: #B4C5E4;
-   -fx-control-inner-background:  #B4C5E4;
-   -fx-selection-bar: #3D52D5;
--fx-selection-bar-text-fill: "white";
--fx-mark-color: white; 
--fx-border-color:white;
--fx-border-width: 0 0 2 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 30px;
+    -fx-faint-focus-color: #B4C5E4;
+    -fx-control-inner-background:  black;
+    -fx-selection-bar: #9b9b9b;
+    -fx-selection-bar-text-fill: "white";
+    -fx-border-color:white;
+    -fx-border-width: 0 0 2 0;
 
 }
 
