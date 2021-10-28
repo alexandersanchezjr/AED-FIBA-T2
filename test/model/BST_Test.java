@@ -3,6 +3,7 @@ package model;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Comparator;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,13 +17,23 @@ public class BST_Test {
 
 
     private void stage1() {
-         players =new BST<>(null);
+         players =new BST<>(new Comparator<Player>() {
+            public int compare(Player i1,Player i2)
+            {
+                return i1.getAge()-i2.getAge();
+            }
+        });
 
     }
 
 
     private void stage2(){
-        players =new BST<>(null);
+        players =new BST<>(new Comparator<Player>() {
+            public int compare(Player i1,Player i2)
+            {
+                return i1.getAge()-i2.getAge();
+            }
+        });
 
         Player player1=new Player("Jacobo", "xxx", 4, "xxx", 3, 3, 3, 3, 3);
 
