@@ -1,7 +1,9 @@
 package dataStructures;
 
+import java.util.ArrayList;
+
 public class Node<V> {
-    private V value;
+    private ArrayList<V> value;
     private Node<V> father;
     protected Node<V> left;
     private Node<V> right;
@@ -10,21 +12,23 @@ public class Node<V> {
     private int h2;
 
 
-    public Node(V value) {
-        this.value = value;
+    public Node(V v) {
+        this.value=new ArrayList<V>();
+		value.add(v);
         this.father = null;
         this.left = null;
         this.right = null;
         height = 1;
     }
 
-    public V getValue() {
-        return this.value;
-    }
+    
 
-    public void setValue(V value) {
-        this.value = value;
-    }
+    public ArrayList<V> getValue() {
+		return value;
+	}
+	public void setValue(ArrayList<V> value) {
+		this.value = value;
+	}
 
     public Node<V> getFather() {
         return this.father;

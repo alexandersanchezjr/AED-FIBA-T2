@@ -18,10 +18,11 @@ public class Main extends Application {
 		FIBAController fb=new FIBAController();
 		fxmload.setController(fb);
 		Parent root=fxmload.load();
-		Scene scene = new Scene(root,676,481);
+		Scene scene = new Scene(root,700,500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		primaryStage.setTitle("FIBA");
+		primaryStage.setResizable(false);
 		fb.loadMenu();
 
 

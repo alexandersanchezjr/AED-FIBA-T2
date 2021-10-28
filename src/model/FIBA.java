@@ -12,7 +12,7 @@ public class FIBA {
 
     private BST<Player> pointsBST;
     private AVL<Player> reboundsAVL;
-    //private AVL<Player> playersAVL;
+    private AVL<Player> playersAVL;
     private RBT<Player> assistsRBT;
     private RBT<Player> testRBT;
     //private AVL<Player> playersAVL;
@@ -82,16 +82,16 @@ public class FIBA {
                     Integer.parseInt(line[8]));
      
 
-                    //testRBT.insert(player);
+                    //pointsBST.insert(player);
             
         }
-        System.out.println(testRBT.getWeight());
+        System.out.println(pointsBST.getWeight());
         //REVISAR ES BST CON ARRAYLIST PARA LOS IGUALES 
 
-        Player param=new Player("name", "lastName", 30, "team", 5, 5, 5, 4, 10);
+        Player param=new Player("name", "lastName", 30, "team", 10, 5, 5, 4, 10);
 
-        testRBT.inOrderMore(testRBT.getRoot(), param);
-        System.out.println(testRBT.getList());
+        pointsBST.searchEquals(pointsBST.getRoot(), param);
+        System.out.println(pointsBST.getList());
         //playersBST.inOrderMore(playersBST.getRoot(), p);
         //System.out.println(playersBST.getList());
         //System.out.println(playersBST.getWeight());

@@ -53,9 +53,9 @@ public class BST_Test {
         players.insert(player1);
 
     
-        boolean test1=  player3==(players.getRoot().getValue());
-        boolean test2=player2==(players.getRoot().getLeft().getValue());
-       boolean test3=player1==(players.getRoot().getLeft().getRight().getValue());
+        boolean test1=  player3==(players.getRoot().getValue().get(0));
+        boolean test2=player2==(players.getRoot().getLeft().getValue().get(0));
+       boolean test3=player1==(players.getRoot().getLeft().getRight().getValue().get(0));
          
         assertTrue(test1);
         assertTrue(test2);
@@ -96,7 +96,7 @@ public class BST_Test {
         Player player3=new Player("Sebastian", "xx", 10, "xxx", 3, 3, 3, 3, 3);
 
         players.delete(player3);
-        boolean test=3==players.getRoot().getValue().getAge();
+        boolean test=3==players.getRoot().getValue().get(0).getAge();
 
         assertTrue(test);
 

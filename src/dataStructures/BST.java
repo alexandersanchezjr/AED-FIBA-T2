@@ -56,7 +56,7 @@ public class BST<V> implements IBST<V> {
 
     private void insert(Node<V> current, Node<V> node) {
         if (current != null) {
-            if(comparator.compare(node.getValue(), current.getValue())<0)
+            if(comparator.compare(node.getValue().get(0), current.getValue().get(0))<0)
             {
                 Node<V> left = current.getLeft();
                 if (left != null) {
@@ -65,7 +65,7 @@ public class BST<V> implements IBST<V> {
                     current.setLeft(node);
                     node.setFather(current);
                 }
-            } else  if(comparator.compare(node.getValue(), current.getValue())>=0) {
+            } else  if(comparator.compare(node.getValue().get(0), current.getValue().get(0))>0) {
                 Node<V> right = current.getRight();
                 if (right != null) {
                     insert(right, node);
@@ -73,18 +73,20 @@ public class BST<V> implements IBST<V> {
                     current.setRight(node);
                     node.setFather(current);
                 }
-            }
+            }else if(comparator.compare(node.getValue().get(0), current.getValue().get(0))==0) {
+				current.getValue().add(node.getValue().get(0));
+			}
         }
     }
 
     public V search(V value) {
-        return search(root, value).getValue();
+        return search(root, value).getValue().get(0);
     }
 
     private Node<V> search(Node<V> current, V value) {
-        if (current == null || (comparator.compare(current.getValue(), value)) == 0) {
+        if (current == null || (comparator.compare(current.getValue().get(0), value)) == 0) {
             return current;
-        } else if (comparator.compare(value, current.getValue()) < 0)
+        } else if (comparator.compare(value, current.getValue().get(0)) < 0)
         {
             // System.out.println(current);
             return search(current.getLeft(), value);
@@ -158,9 +160,9 @@ public class BST<V> implements IBST<V> {
 	public void inOrderLess(Node<V> node,V param) {
 		if (node != null) {
 			inOrderLess(node.getRight(),param);
-            if(comparator.compare(node.getValue(),param)>0)
+            if(comparator.compare(node.getValue().get(0),param)<0)
 			{
-				list.add(node.getValue());
+				list.addAll(node.getValue());
 			}
 			inOrderLess(node.getLeft(),param);
 		}
@@ -169,8 +171,8 @@ public class BST<V> implements IBST<V> {
 	public void inOrderMore(Node<V> node,V param) {
 		if (node != null) {
 			inOrderMore(node.getRight(),param);
-			if(comparator.compare(node.getValue(),param)<0) {
-				list.add(node.getValue());
+			if(comparator.compare(node.getValue().get(0),param)>0) {
+				list.addAll(node.getValue());
 			}
 			inOrderMore(node.getLeft(),param);
 		}
@@ -179,8 +181,8 @@ public class BST<V> implements IBST<V> {
     public void searchEquals(Node<V> node,V param) {
 		if (node != null) {
 			searchEquals(node.getRight(),param);
-			if((comparator.compare(node.getValue(),param)==0)) {
-				list.add(node.getValue());
+			if((comparator.compare(node.getValue().get(0),param)==0)) {
+				list.addAll(node.getValue());
 			}
 			searchEquals(node.getLeft(),param);
 		}
