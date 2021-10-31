@@ -1,7 +1,7 @@
 /.vscode/
 /VP/
 /bin/
-.iml
+*.iml
 /.idea/
 input.txt
 /lib/
