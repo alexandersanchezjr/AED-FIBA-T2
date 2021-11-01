@@ -1,3 +1,5 @@
+package model;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Comparator;
@@ -5,10 +7,9 @@ import java.util.Comparator;
 import org.junit.jupiter.api.Test;
 
 import dataStructures.AVL;
-import dataStructures.BST;
-import model.Player;
 
-class AVL_Test {
+
+public class AVL_Test {
 	
 	AVL<Player> players;
 	AVL<Player> players2;
@@ -20,7 +21,7 @@ class AVL_Test {
             }
         });
 		
-		players2 = new AVL<>(new COmparator<Player>() {
+		players2 = new AVL<>(new Comparator<Player>() {
 			public int compare(Player i1, Player i2) {
 				return i1.getRebounds() - i2.getRebounds();
 			}
@@ -34,7 +35,7 @@ class AVL_Test {
             }
         });
 		
-		players2 = new AVL<>(new COmparator<Player>() {
+		players2 = new AVL<>(new Comparator<Player>() {
 			public int compare(Player i1, Player i2) {
 				return i1.getRebounds() - i2.getRebounds();
 			}
@@ -80,12 +81,12 @@ class AVL_Test {
         assertTrue(test1);
         assertTrue(test2);
         assertTrue(test3);
-        assertTrue(players.getWeight()==2);
+        assertTrue(players.getWeight()==3);
         
         assertTrue(test4);
         assertTrue(test5);
         assertTrue(test6);
-        assertTrue(players2.getWeight()==2);
+        assertTrue(players2.getWeight()==3);
         
         /*If the method of inserting a node works correctly, 
          the method of balancing and rotations will also work correctly.
@@ -102,12 +103,12 @@ class AVL_Test {
 		players2.insert(player4);
 		
 		boolean test1 = player4 == (players.getRoot().getRight().getLeft().getValue().get(0));
-        boolean test2 = player4 == (players2.getRoot().getRight().getLeft().getValue().get(0));
+        boolean test2 = player4 == (players2.getRoot().getRight().getRight().getValue().get(0));
         
         assertTrue(test1);
         assertTrue(test2);
-        assertTrue(players.getWeight()==3);
-        assertTrue(players2.getWeight()==3);
+        assertTrue(players.getWeight()==4);
+        assertTrue(players2.getWeight()==4);
 	}
 	
 	
