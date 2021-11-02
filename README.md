@@ -19,4 +19,4 @@ This program reflects the functionality of basketball statistics used to search 
 
 FIBA is the regulatory body for basketball worldwide, given the recent avalanche of numbers of figures from the games has decided that the most relevant data of each of the professionals in the basketball. Patterns about the development of sport and more criteria to get an idea of where the sports is currently heading. In this program, 200,000 data about NBA players will be loaded with information such as name, last name, age, team, points, rebounds, assisst, robberies and blocks. 
 
-Moreover, you can find all documentation of this app [here](___).
+Moreover, you can find all documentation of this app [here](https://github.com/ALEXJR2002/AED-FIBA-T2/tree/main/docs).
