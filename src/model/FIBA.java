@@ -55,6 +55,14 @@ public class FIBA {
         }
 
     }
+    
+    public void setPointsAVL(AVL<Player> avl) {
+    	pointsAVL = avl;
+    }
+    
+    public void setRobberiesRBT(RBT<Player> rbt) {
+    	robberiesRBT = rbt;
+    }
 
     public static final String PLAYERS_FILE_NAME = "data/Dataset.csv";
 
