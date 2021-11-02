@@ -1,0 +1,111 @@
+@font-face {
+    src: url("fiba.otf");
+  }
+  
+  .label {
+    -fx-font-family: "FIBA";
+    -fx-text-fill: white
+  }
+
+
+  .button
+  {
+    -fx-font-family: "FIBA";
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    
+  }
+
+
+  .button:hover
+  {
+    -fx-font-family: "FIBA";
+    -fx-text-fill:#9b9b9b ;
+    -fx-font-size: 30px;
+
+  
+  }
+
+
+
+.table-view{
+    -fx-background-color: white;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   black;
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #B4C5E4;
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+
+ }
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive(  #9b9b9b,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #9b9b9b,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+
+.text-field{
+  -fx-font-family: "FIBA";
+  -fx-text-fill: white;
+  -fx-background-color: transparent;
+    -fx-font-size: 30px;
+    -fx-border-color:white;
+    -fx-border-width: 0 0 2 0;
+}
+
+
+
+
+.choice-box {
+    -fx-background-color: transparent;
+    -fx-font-size: 30px;
+    -fx-faint-focus-color: #B4C5E4;
+    -fx-control-inner-background:  black;
+    -fx-selection-bar: #9b9b9b;
+    -fx-selection-bar-text-fill: "white";
+    -fx-border-color:white;
+    -fx-border-width: 0 0 2 0;
+
+}
+
+.choice-box > .label { -fx-text-fill: white; }

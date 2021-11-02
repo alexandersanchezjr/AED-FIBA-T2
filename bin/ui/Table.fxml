@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="LoadMenu" layoutX="490.0" layoutY="28.0" mnemonicParsing="false" onAction="#loadMenu" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: transparent;" stylesheets="@../styles/styles.css" text="RETURN">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="104.0" fitWidth="179.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/menu-background.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablePlayers" layoutX="12.0" layoutY="116.0" prefHeight="370.0" prefWidth="677.0" stylesheets="@../styles/styles.css">
+         <columns>
+            <TableColumn fx:id="idName" prefWidth="108.0" text="Name" />
+            <TableColumn fx:id="idLastName" prefWidth="82.0" text="Last Name" />
+            <TableColumn fx:id="idAge" prefWidth="47.0" text="Age" />
+            <TableColumn fx:id="idTeam" prefWidth="90.0" text="Team" />
+            <TableColumn fx:id="idPoints" prefWidth="76.0" text="Points" />
+            <TableColumn fx:id="idRebounds" prefWidth="67.0" text="Rebounds" />
+            <TableColumn fx:id="idAssists" prefWidth="67.0" text="Assists" />
+            <TableColumn fx:id="idRobberies" prefWidth="76.0" text="Robberies" />
+            <TableColumn fx:id="idBlocks" prefWidth="63.0" text="Blocks" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>
